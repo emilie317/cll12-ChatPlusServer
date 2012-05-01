@@ -15,6 +15,9 @@ public:
     explicit ChatPlusServer(QWidget *parent = 0);
     ~ChatPlusServer();
     
+private slots:
+    void on_btnPhoto_clicked();
+
 private:
     Ui::ChatPlusServer *ui;
 };
