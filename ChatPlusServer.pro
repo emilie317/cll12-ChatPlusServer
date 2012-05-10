@@ -1,18 +1,35 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2012-05-01T16:23:07
+# Project created by QtCreator 2012-05-07T22:04:36
 #
 #-------------------------------------------------
 
 QT       += core gui
+QT       += network
 
 TARGET = ChatPlusServer
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        chatplusserver.cpp
+        chatplusserver.cpp \
+    cclient.cpp \
+    cmessage.cpp \
+    cserveur.cpp
 
-HEADERS  += chatplusserver.h
+HEADERS  += cclient.h \
+    chatplusserver.h \
+    CConstante.h \
+    CEnum.h \
+    cmessage.h \
+    cserveur.h
 
 FORMS    += chatplusserver.ui
+
+
+
+
+
+
+
+
