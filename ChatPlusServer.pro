@@ -14,17 +14,17 @@ TEMPLATE = app
 SOURCES += main.cpp\
         chatplusserver.cpp \
     cclient.cpp \
-    cmessage.cpp \
     cserveur.cpp
 
 HEADERS  += cclient.h \
     chatplusserver.h \
     CConstante.h \
     CEnum.h \
-    cmessage.h \
     cserveur.h
 
 FORMS    += chatplusserver.ui
+
+
 
 
 

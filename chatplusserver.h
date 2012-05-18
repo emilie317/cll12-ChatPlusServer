@@ -24,9 +24,16 @@ public:
 private slots:
     void on_btnDemarrer_clicked();
     void NouvelleConnexionAccepte(QString address);
+    void AfficheNomUsager(QString usager);
+    void ClientDeconnecte(QString usager);
+    void RafraichirListeUsager(QList<QString> lstUsager);
+    void pingRecu(QString usager);
+
+    void on_btnArreter_clicked();
 
 private:
     Ui::ChatPlusServer *ui;
+    void EcritLog(QString log);
 
 };
 

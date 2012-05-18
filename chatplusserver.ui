@@ -14,28 +14,96 @@
    <string>ChatPlusServer</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="btnDemarrer">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>90</y>
+      <width>231</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Clients :</string>
+    </property>
+    <widget class="QListView" name="lsvClients">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>211</width>
+       <height>421</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>541</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Activités :</string>
+    </property>
+    <widget class="QTextEdit" name="txtActivites">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>521</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>131</width>
-      <height>41</height>
+      <width>781</width>
+      <height>71</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Démarrer</string>
+    <property name="title">
+     <string>Serveur :</string>
     </property>
-   </widget>
-   <widget class="QTextEdit" name="txtActivites">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>60</y>
-      <width>481</width>
-      <height>491</height>
-     </rect>
-    </property>
+    <widget class="QPushButton" name="btnDemarrer">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Démarrer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnArreter">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>30</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Arrêter</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

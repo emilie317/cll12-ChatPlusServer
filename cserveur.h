@@ -18,6 +18,21 @@ protected:
 
 signals:
     void clientConnected(QString address);
+    void resignalUserName(QString name);
+    void resignalClientDisconnected(QString name);
+    void refreshUserList(QList<QString> lstUsagers);
+    void reTransmetPingRecu(QString name);
+
+private slots:
+    void signalUserName(QString name);
+    void clientDisconnected(QString name);
+    void envoiListeClients();
+    void transmetMessage(QString source, QString destinataire, QString message);
+    void transmetFichier(QString source, QString destinataire, QString byteEcrit, QString byteTotal, QString fichier, QByteArray data);
+    void pingRecu(QString name);
+
+private:
+    QList<QString> BuildUserList();
 
 };
 

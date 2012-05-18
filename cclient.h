@@ -4,7 +4,6 @@
 #include <QString>
 #include <QtNetwork/QTcpSocket>
 
-
 class CClient : public QObject
 {
     Q_OBJECT
@@ -12,11 +11,26 @@ class CClient : public QObject
 public:
     CClient(QTcpSocket *socket);
 
-private:
+    QString m_Surnom;
+    QString m_IP;
     QTcpSocket *m_socket;
+
+    QString GetNomClient();
+
+private:
+    QString GetClientAdress();
 
 private slots:
     void readyRead();
+    void disconnected();
+
+signals:
+    void signalUserName(QString name);
+    void clientDisconnected(QString name);
+    void demandeEnvoiListeClients();
+    void transmetMessage(QString source, QString destinataire, QString message);
+    void transmetFichier(QString source, QString destinataire, QString byteEcrit, QString byteTotal, QString fichier, QByteArray data);
+    void pingRecu(QString name);
 
 };
 
